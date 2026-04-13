@@ -83,7 +83,7 @@ h1 {
 .city-header h2 {
   margin: 0;
   font-size: 22px;
-  color: #6a8ecf; /* pastel blue */
+  color: #6a8ecf;
 }
 
 .flag {
@@ -92,14 +92,14 @@ h1 {
 
 .date {
   font-size: 15px;
-  color: #8a9bb5; /* muted blue-grey */
+  color: #8a9bb5;
   margin: 0;
 }
 
 .time {
   font-size: 26px;
   font-weight: 600;
-  color: #b85f7a; /* deep soft pink */
+  color: #b85f7a;
   text-align: right;
   min-width: 120px;
 }
