@@ -1,7 +1,6 @@
-/* GENERAL PAGE */
 body {
   font-family: "Poppins", sans-serif;
-  background: #fcefff; /* soft pastel pink */
+  background: #fcefff;
   margin: 0;
   padding: 40px 20px;
   color: #333;
@@ -18,14 +17,12 @@ body {
   text-align: center;
 }
 
-/* TITLE */
 h1 {
   font-size: 28px;
-  color: #6a8ecf; /* pastel blue */
+  color: #6a8ecf;
   margin-bottom: 25px;
 }
 
-/* SELECT DROPDOWN */
 .city-selector {
   margin-bottom: 25px;
   text-align: left;
@@ -35,22 +32,22 @@ h1 {
   display: block;
   font-size: 16px;
   font-weight: 500;
-  color: #6a8ecf; /* pastel blue */
+  color: #6a8ecf;
   margin-bottom: 8px;
 }
 
 .city-selector select {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid #f3d9c2; /* soft beige border */
+  border: 2px solid #f3d9c2;
   border-radius: 10px;
   font-size: 16px;
   transition: 0.3s;
-  background: #fff9f4; /* warm beige background */
+  background: #fff9f4;
 }
 
 .city-selector select:focus {
-  border-color: #e8b8a4; /* deeper beige */
+  border-color: #e8b8a4;
   outline: none;
   box-shadow: 0 0 8px rgba(232, 184, 164, 0.4);
 }
