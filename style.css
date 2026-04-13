@@ -1,4 +1,3 @@
-/* GENERAL PAGE */
 body {
   font-family: "Poppins", sans-serif;
   background: #fcefff; /* soft pastel pink */
@@ -7,7 +6,6 @@ body {
   color: #000; /* all text black */
 }
 
-/* MAIN CARD */
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -18,14 +16,12 @@ body {
   text-align: center;
 }
 
-/* TITLE */
 h1 {
   font-size: 28px;
-  color: #000; /* black */
+  color: #000;
   margin-bottom: 25px;
 }
 
-/* SELECT DROPDOWN */
 .city-selector {
   margin-bottom: 25px;
   text-align: left;
@@ -35,23 +31,23 @@ h1 {
   display: block;
   font-size: 16px;
   font-weight: 500;
-  color: #000; /* black */
+  color: #000;
   margin-bottom: 8px;
 }
 
 .city-selector select {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid #f3d9c2; /* soft beige border */
+  border: 2px solid #f3d9c2;
   border-radius: 10px;
   font-size: 16px;
   transition: 0.3s;
-  background: #fff9f4; /* warm beige */
+  background: #fff9f4;
   color: #000; /* black text */
 }
 
 .city-selector select:focus {
-  border-color: #e8b8a4; /* deeper beige */
+  border-color: #e8b8a4;
   outline: none;
   box-shadow: 0 0 8px rgba(232, 184, 164, 0.4);
 }
@@ -67,10 +63,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #eaf3ff; /* soft pastel blue */
+  background: #eaf3ff;
   padding: 20px;
   border-radius: 15px;
-  border-left: 6px solid #f7b7c3; /* pastel pink accent */
+  border-left: 6px solid #f7b7c3;
 }
 
 .city-info {
@@ -88,7 +84,7 @@ h1 {
 .city-header h2 {
   margin: 0;
   font-size: 22px;
-  color: #000; /* black */
+  color: #000;
 }
 
 .flag {
@@ -104,7 +100,7 @@ h1 {
 .time {
   font-size: 26px;
   font-weight: 600;
-  color: #000; /* black */
+  color: #000;
   text-align: right;
   min-width: 120px;
 }
