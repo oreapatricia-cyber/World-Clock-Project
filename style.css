@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 40px 20px;
   color: #000; /* all text black */
+  font-family: "Poppins", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
 }
 
 .container {
