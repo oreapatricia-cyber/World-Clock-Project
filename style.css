@@ -1,7 +1,101 @@
+/* GENERAL PAGE */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f0f0f0;
+  font-family: "Poppins", sans-serif;
+  background: #f7f2ff; /* soft lavender pastel */
   margin: 0;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* MAIN CARD */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* TITLE */
+h1 {
+  font-size: 28px;
+  color: #6a2c91;
+  margin-bottom: 25px;
+}
+
+/* SELECT DROPDOWN */
+.city-selector {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.city-selector label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6a2c91;
+  margin-bottom: 8px;
+}
+
+.city-selector select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #d8c7ff;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.city-selector select:focus {
+  border-color: #b28bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(178, 139, 255, 0.4);
+}
+
+/* CITY BLOCKS */
+.cities {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.city {
+  background: #f3eaff;
   padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  border-left: 6px solid #b28bff;
+}
+
+/* CITY HEADER */
+.city-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.city-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #4a2b6f;
+}
+
+.flag {
+  font-size: 24px;
+}
+
+/* DATE + TIME */
+.date {
+  font-size: 15px;
+  color: #6a2c91;
+  margin-top: 8px;
+}
+
+.time {
+  font-size: 26px;
+  font-weight: 600;
+  color: #4a2b6f;
+  margin-top: 5px;
 }
