@@ -73,7 +73,6 @@ h1 {
   border-left: 6px solid #f7b7c3; /* pastel pink accent */
 }
 
-/* LEFT SIDE INFO */
 .city-info {
   display: flex;
   flex-direction: column;
@@ -96,14 +95,12 @@ h1 {
   font-size: 24px;
 }
 
-/* DATE BELOW CITY */
 .date {
   font-size: 15px;
-  color: #000; /* black */
+  color: #000;
   margin: 0;
 }
 
-/* RIGHT SIDE TIME */
 .time {
   font-size: 26px;
   font-weight: 600;
