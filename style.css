@@ -1,7 +1,7 @@
 /* GENERAL PAGE */
 body {
   font-family: "Poppins", sans-serif;
-  background: #e8f4ff; /* pastel blue */
+  background: #fcefff; /* soft pastel pink */
   margin: 0;
   padding: 40px 20px;
   color: #333;
@@ -21,7 +21,7 @@ body {
 /* TITLE */
 h1 {
   font-size: 28px;
-  color: #3a6ea5; /* soft blue */
+  color: #6a8ecf; /* pastel blue */
   margin-bottom: 25px;
 }
 
@@ -35,27 +35,26 @@ h1 {
   display: block;
   font-size: 16px;
   font-weight: 500;
-  color: #3a6ea5;
+  color: #6a8ecf; /* pastel blue */
   margin-bottom: 8px;
 }
 
 .city-selector select {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid #c8e6d0; /* pastel green border */
+  border: 2px solid #f3d9c2; /* soft beige border */
   border-radius: 10px;
   font-size: 16px;
   transition: 0.3s;
-  background: #fdfbf7; /* soft beige */
+  background: #fff9f4; /* warm beige background */
 }
 
 .city-selector select:focus {
-  border-color: #8bc9a3; /* deeper pastel green */
+  border-color: #e8b8a4; /* deeper beige */
   outline: none;
-  box-shadow: 0 0 8px rgba(139, 201, 163, 0.4);
+  box-shadow: 0 0 8px rgba(232, 184, 164, 0.4);
 }
 
-/* CITY BLOCKS */
 .cities {
   display: flex;
   flex-direction: column;
@@ -66,16 +65,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f0faff; /* very light blue */
+  background: #eaf3ff;
   padding: 20px;
   border-radius: 15px;
-  border-left: 6px solid #8bc9a3; /* pastel green accent */
+  border-left: 6px solid #f7b7c3;
 }
 
-/* LEFT SIDE INFO */
 .city-info {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
 .city-header {
@@ -87,25 +86,23 @@ h1 {
 .city-header h2 {
   margin: 0;
   font-size: 22px;
-  color: #3a6ea5; /* soft blue */
+  color: #6a8ecf; /* pastel blue */
 }
 
 .flag {
   font-size: 24px;
 }
 
-/* DATE */
 .date {
   font-size: 15px;
-  color: #6b8a99; /* muted blue-grey */
-  margin-top: 8px;
+  color: #8a9bb5; /* muted blue-grey */
+  margin: 0;
 }
 
-/* RIGHT SIDE TIME */
 .time {
   font-size: 26px;
   font-weight: 600;
-  color: #2f5c4f; /* deep soft green */
+  color: #b85f7a; /* deep soft pink */
   text-align: right;
   min-width: 120px;
 }
