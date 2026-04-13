@@ -1,7 +1,7 @@
 /* GENERAL PAGE */
 body {
   font-family: "Poppins", sans-serif;
-  background: #f7f2ff; /* soft lavender pastel */
+  background: #e8f4ff; /* pastel blue */
   margin: 0;
   padding: 40px 20px;
   color: #333;
@@ -21,7 +21,7 @@ body {
 /* TITLE */
 h1 {
   font-size: 28px;
-  color: #6a2c91;
+  color: #3a6ea5; /* soft blue */
   margin-bottom: 25px;
 }
 
@@ -35,23 +35,24 @@ h1 {
   display: block;
   font-size: 16px;
   font-weight: 500;
-  color: #6a2c91;
+  color: #3a6ea5;
   margin-bottom: 8px;
 }
 
 .city-selector select {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid #d8c7ff;
+  border: 2px solid #c8e6d0; /* pastel green border */
   border-radius: 10px;
   font-size: 16px;
   transition: 0.3s;
+  background: #fdfbf7; /* soft beige */
 }
 
 .city-selector select:focus {
-  border-color: #b28bff;
+  border-color: #8bc9a3; /* deeper pastel green */
   outline: none;
-  box-shadow: 0 0 8px rgba(178, 139, 255, 0.4);
+  box-shadow: 0 0 8px rgba(139, 201, 163, 0.4);
 }
 
 /* CITY BLOCKS */
@@ -62,14 +63,21 @@ h1 {
 }
 
 .city {
-  background: #f3eaff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0faff; /* very light blue */
   padding: 20px;
   border-radius: 15px;
-  text-align: left;
-  border-left: 6px solid #b28bff;
+  border-left: 6px solid #8bc9a3; /* pastel green accent */
 }
 
-/* CITY HEADER */
+/* LEFT SIDE INFO */
+.city-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .city-header {
   display: flex;
   align-items: center;
@@ -79,23 +87,25 @@ h1 {
 .city-header h2 {
   margin: 0;
   font-size: 22px;
-  color: #4a2b6f;
+  color: #3a6ea5; /* soft blue */
 }
 
 .flag {
   font-size: 24px;
 }
 
-/* DATE + TIME */
+/* DATE */
 .date {
   font-size: 15px;
-  color: #6a2c91;
+  color: #6b8a99; /* muted blue-grey */
   margin-top: 8px;
 }
 
+/* RIGHT SIDE TIME */
 .time {
   font-size: 26px;
   font-weight: 600;
-  color: #4a2b6f;
-  margin-top: 5px;
+  color: #2f5c4f; /* deep soft green */
+  text-align: right;
+  min-width: 120px;
 }
