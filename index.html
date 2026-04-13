@@ -2,26 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Clocks</title>
     <link rel="stylesheet" href="style.css" />
-    <title>World Clock</title>
   </head>
+
   <body>
     <div class="container">
-      <h1>World Clock</h1>
-      <select>
-        <option value="Select a city">Select a city</option>
-        <option value="New York">New York</option>
-        <option value="Dubai">Dubai</option>
-        <option value="Tokyo">Tokyo</option>
-      </select>
+      <h1>World Clocks</h1>
+
+      <div class="city-selector">
+        <label for="city">Choose city</label>
+        <select id="city">
+          <option value="">Select a city…</option>
+          <option value="los-angeles">Los Angeles</option>
+          <option value="sydney">Sydney</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="paris">Paris</option>
+        </select>
+      </div>
+
+      <div class="cities">
+        <div class="city">
+          <div class="city-header">
+            <span class="flag">🇺🇸</span>
+            <h2>Los Angeles</h2>
+          </div>
+          <div class="date" id="la-date">August 15th 2022</div>
+          <div class="time" id="la-time">1:48:15 AM</div>
+        </div>
+
+        <div class="city">
+          <div class="city-header">
+            <span class="flag">🇦🇺</span>
+            <h2>Sydney</h2>
+          </div>
+          <div class="date" id="sydney-date">August 15th 2022</div>
+          <div class="time" id="sydney-time">1:48:15 AM</div>
+        </div>
+
+        <div class="city">
+          <div class="city-header">
+            <span class="flag">🇯🇵</span>
+            <h2>Tokyo</h2>
+          </div>
+          <div class="date" id="tokyo-date">August 15th 2022</div>
+          <div class="time" id="tokyo-time">1:48:15 AM</div>
+        </div>
+
+        <div class="city">
+          <div class="city-header">
+            <span class="flag">🇫🇷</span>
+            <h2>Paris</h2>
+          </div>
+          <div class="date" id="paris-date">August 15th 2022</div>
+          <div class="time" id="paris-time">1:48:15 AM</div>
+        </div>
+      </div>
     </div>
-    <footer>
-      This project was coded by Patricia J. Orea and is
-      <a href="https://github.com/oreapatricia-cyber" target="_blank"
-        >open source on GitHub</a
-      >
-    </footer>
+
     <script src="index.js"></script>
   </body>
 </html>
