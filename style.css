@@ -2,25 +2,40 @@
 
 body {
   font-family: "Poppins", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
-  background: white;
+  background: linear-gradient(135deg, #b48cff, #8fa2ff, #ff9acb);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
   margin: 0;
   padding: 40px 20px;
   color: #000;
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
   text-align: center;
+  backdrop-filter: blur(6px);
 }
 
 h1 {
   font-size: 28px;
-  color: #000;
+  color: #2d1b4e;
   margin-bottom: 25px;
 }
 
@@ -34,25 +49,26 @@ h1 {
 .city-selector label {
   display: block;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
+  color: #2d1b4e;
   margin-bottom: 8px;
 }
 
 .city-selector select {
   width: 100%;
   padding: 12px 15px;
-  border: 2px solid #f5d6e0;
+  border: 2px solid #b48cff;
   border-radius: 10px;
   font-size: 16px;
   transition: 0.3s;
-  background: #fff7fb;
-  color: #000;
+  background: #e8d8ff;
+  color: #2d1b4e;
 }
 
 .city-selector select:focus {
-  border-color: #e8b8d0;
+  border-color: #8f6bff;
   outline: none;
-  box-shadow: 0 0 8px rgba(232, 184, 208, 0.4);
+  box-shadow: 0 0 10px rgba(143, 107, 255, 0.5);
 }
 
 /* -------------------- CITY CARDS -------------------- */
@@ -68,10 +84,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f6f2ff;
+  background: linear-gradient(135deg, #d2b8ff, #b48cff);
   padding: 20px;
   border-radius: 15px;
-  border-left: 6px solid #f7b7c3;
+  border-left: 6px solid #8f6bff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .city-info {
@@ -80,22 +97,30 @@ h1 {
   gap: 4px;
 }
 
-.city-header h2,
 .city-info h2 {
   margin: 0;
   font-size: 22px;
-  color: #000;
+  color: #2d1b4e;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flag {
+  font-size: 24px;
+  display: inline-block;
 }
 
 .date {
   font-size: 15px;
+  color: #2d1b4e;
   margin: 0;
 }
 
 .time {
   font-size: 26px;
-  font-weight: 600;
-  color: #000;
+  font-weight: 700;
+  color: #2d1b4e;
   text-align: right;
   min-width: 120px;
 }
@@ -106,10 +131,11 @@ h1 {
   display: none;
   margin-top: 20px;
   text-align: center;
-  color: #1a73e8;
+  color: #4a2cff;
   text-decoration: underline;
   cursor: pointer;
   font-size: 14px;
+  font-weight: 600;
 }
 
 /* -------------------- FOOTER -------------------- */
@@ -119,15 +145,16 @@ footer {
   margin-top: 40px;
   padding-top: 20px;
   font-size: 14px;
-  color: #000;
-  opacity: 0.7;
+  color: #2d1b4e;
+  opacity: 0.8;
 }
 
 footer a {
-  color: #1a73e8; /* blue link */
+  color: #4a2cff;
   text-decoration: underline;
+  font-weight: 600;
 }
 
 footer a:hover {
-  opacity: 0.6;
+  opacity: 0.7;
 }
