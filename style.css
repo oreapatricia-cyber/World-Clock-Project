@@ -71,14 +71,23 @@ h1 {
   box-shadow: 0 0 10px rgba(143, 107, 255, 0.5);
 }
 
-/* -------------------- CITY CARDS -------------------- */
+/* -------------------- HOMEPAGE CLOCKS -------------------- */
 
-.cities,
-.homepage {
+#homepage {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
+/* -------------------- SELECTED CITY -------------------- */
+
+#selected-city {
+  display: none; /* hidden until a city is selected */
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* -------------------- CITY CARDS -------------------- */
 
 .city {
   display: flex;
@@ -132,6 +141,8 @@ h1 {
   font-size: 14px;
   font-weight: 600;
 }
+
+/* -------------------- FOOTER -------------------- */
 
 footer {
   text-align: center;
