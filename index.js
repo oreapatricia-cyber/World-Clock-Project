@@ -29,3 +29,32 @@ function updateTime() {
 // Update every second
 setInterval(updateTime, 1000);
 updateTime();
+
+// ⭐ NEW: Handle dropdown selection (including Current Location)
+document.querySelector("#city").addEventListener("change", function () {
+  let selected = this.value;
+
+  if (!selected) return;
+
+  // If user chooses "Current Location"
+  if (selected === "current") {
+    let userZone = moment.tz.guess();
+    let now = moment().tz(userZone);
+
+    alert(
+      `Your current timezone is: ${userZone}\n` +
+        `Date: ${now.format("MMMM Do YYYY")}\n` +
+        `Time: ${now.format("h:mm:ss A")}`,
+    );
+    return;
+  }
+
+  // Otherwise, show selected city time
+  let cityTime = moment().tz(selected);
+
+  alert(
+    `City: ${selected}\n` +
+      `Date: ${cityTime.format("MMMM Do YYYY")}\n` +
+      `Time: ${cityTime.format("h:mm:ss A")}`,
+  );
+});
