@@ -1,53 +1,39 @@
-function updateTime() {
-  let laTime = moment().tz("America/Los_Angeles");
-  document.querySelector("#la-date").innerHTML = laTime.format("MMMM Do YYYY");
-  document.querySelector("#la-time").innerHTML = laTime.format("h:mm:ss A");
+function updateCity(timezone, cityName) {
+  let cityTime = moment().tz(timezone);
 
-  let sydneyTime = moment().tz("Australia/Sydney");
-  document.querySelector("#sydney-date").innerHTML =
-    sydneyTime.format("MMMM Do YYYY");
-  document.querySelector("#sydney-time").innerHTML =
-    sydneyTime.format("h:mm:ss A");
-
-  let tokyoTime = moment().tz("Asia/Tokyo");
-  document.querySelector("#tokyo-date").innerHTML =
-    tokyoTime.format("MMMM Do YYYY");
-  document.querySelector("#tokyo-time").innerHTML =
-    tokyoTime.format("h:mm:ss A");
-
-  let parisTime = moment().tz("Europe/Paris");
-  document.querySelector("#paris-date").innerHTML =
-    parisTime.format("MMMM Do YYYY");
-  document.querySelector("#paris-time").innerHTML =
-    parisTime.format("h:mm:ss A");
+  let citiesElement = document.querySelector(".cities");
+  citiesElement.innerHTML = `
+    <div class="city">
+      <div class="city-info">
+        <div class="city-header">
+          <h2>${cityName}</h2>
+        </div>
+        <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+      </div>
+      <div class="time">${cityTime.format("h:mm:ss A")}</div>
+    </div>
+  `;
 }
 
-setInterval(updateTime, 1000);
-updateTime();
+function startClock(timezone, cityName) {
+  updateCity(timezone, cityName);
+  setInterval(() => updateCity(timezone, cityName), 1000);
+}
 
 document.querySelector("#city").addEventListener("change", function () {
   let selected = this.value;
 
   if (!selected) return;
 
-  // If user chooses "Current Location"
+  // Current Location (Miami → America/New_York)
   if (selected === "current") {
     let userZone = moment.tz.guess();
-    let now = moment().tz(userZone);
-
-    alert(
-      `Your current timezone is: ${userZone}\n` +
-        `Date: ${now.format("MMMM Do YYYY")}\n` +
-        `Time: ${now.format("h:mm:ss A")}`,
-    );
+    let cityName = userZone.split("/")[1].replace("_", " ");
+    startClock(userZone, cityName);
     return;
   }
 
-  let cityTime = moment().tz(selected);
-
-  alert(
-    `City: ${selected}\n` +
-      `Date: ${cityTime.format("MMMM Do YYYY")}\n` +
-      `Time: ${cityTime.format("h:mm:ss A")}`,
-  );
+  // Other cities
+  let cityName = selected.split("/")[1].replace("_", " ");
+  startClock(selected, cityName);
 });
