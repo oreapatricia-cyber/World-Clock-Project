@@ -1,3 +1,6 @@
+// Track the active interval
+let cityInterval = null;
+
 // Update homepage clocks
 function updateHomepage() {
   let la = moment().tz("America/Los_Angeles");
@@ -35,8 +38,15 @@ function updateCity(timezone, cityName) {
 }
 
 function startClock(timezone, cityName) {
+  // Stop previous interval
+  if (cityInterval) {
+    clearInterval(cityInterval);
+  }
+
   updateCity(timezone, cityName);
-  setInterval(() => updateCity(timezone, cityName), 1000);
+
+  // Start new interval
+  cityInterval = setInterval(() => updateCity(timezone, cityName), 1000);
 }
 
 // Dropdown behavior
@@ -65,4 +75,9 @@ document.querySelector("#back-home").addEventListener("click", function () {
   document.querySelector("#homepage").style.display = "block";
   document.querySelector("#selected-city").style.display = "none";
   document.querySelector("#back-home").style.display = "none";
+
+  // Stop selected city interval when returning home
+  if (cityInterval) {
+    clearInterval(cityInterval);
+  }
 });
