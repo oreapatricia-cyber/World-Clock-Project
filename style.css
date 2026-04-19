@@ -106,11 +106,6 @@ h1 {
   gap: 8px;
 }
 
-.flag {
-  font-size: 24px;
-  display: inline-block;
-}
-
 .date {
   font-size: 15px;
   color: #2d1b4e;
